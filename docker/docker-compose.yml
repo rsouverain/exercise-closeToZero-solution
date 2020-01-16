@@ -1,0 +1,21 @@
+version: "3.7"
+
+networks:
+  main: ~
+
+services:
+  nodecli:
+    build: nodecli
+    image: exercise/ctz_cli:latest
+    container_name: exercise_ctz_cli
+    environment:
+      - NODE_ENV=development
+      - TERM=xterm-color
+    cap_add:
+      - SYS_PTRACE
+    networks:
+      - main
+    volumes:
+      - type: "bind"
+        source: "../"
+        target: "/project"
