@@ -2,8 +2,7 @@
  * Returns the closest number to zero from the input array.
  * Emphasis NOT given on perfs
  */
-export function closestToZeroBadPerfs (input: Array<number>) : number {
-
+export function closestToZeroBadPerfs (input: Array<number>): number {
     // If the input array is undefined or empty, the function returns 0
     if (!Array.isArray(input) || !input.length) {
         return 0
@@ -20,7 +19,8 @@ export function closestToZeroBadPerfs (input: Array<number>) : number {
     if (input.includes(absoluteMin)) {
         // If the closest number in input could be either negative or positive, the function returns the positive one
         return absoluteMin
-    } else {
+    }
+    else {
         return -absoluteMin
     }
 }

@@ -2,8 +2,7 @@
  * Returns the closest number to zero from the input array.
  * Emphasis given on perfs
  */
-export function closestToZero (input: Array<number>) : number {
-
+export function closestToZero (input: Array<number>): number {
     // If the input array is undefined or empty, the function returns 0
     if (!Array.isArray(input) || !input.length) {
         return 0
@@ -13,7 +12,7 @@ export function closestToZero (input: Array<number>) : number {
     let resultDistanceToZero = null
 
     // Reverse looping through input array
-    for (let i = input.length-1; i>=0; i--) {
+    for (let i = input.length - 1; i >= 0; i--) {
         const item = input[i]
 
         // Current item in the array is not a number, ignoring it
@@ -26,11 +25,11 @@ export function closestToZero (input: Array<number>) : number {
         if (
             resultDistanceToZero === null ||
             distanceToZero < resultDistanceToZero ||
-            (
+            
                 resultDistanceToZero === distanceToZero &&
                 result !== null &&
                 item > 0
-            )
+            
         ) {
             result = item
             resultDistanceToZero = distanceToZero
