@@ -54,8 +54,8 @@ module.exports = {
         coverage information will be collected for it even if no tests exist for this file and it's never required in the test suite.
      */
     collectCoverageFrom: [
-        'src/**/*.ts',
-        'src/**.ts',
+        'lib/**/*.js',
+        'lib/**.js',
     ],
 
     // A list of reporter names that Jest uses when writing coverage reports.
@@ -78,7 +78,7 @@ module.exports = {
      */
     coveragePathIgnorePatterns: [
         '<rootDir>/node_modules/',
-        '<rootDir>/lib/',
+        '<rootDir>/lib/index.js',
     ],
 
     // The directory where Jest should output its coverage files.
