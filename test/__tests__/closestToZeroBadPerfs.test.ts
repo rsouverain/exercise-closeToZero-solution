@@ -1,11 +1,11 @@
 import { createTestCases } from '../cases'
 const testCases = createTestCases()
 
-describe(`function closestToZero`, () => {
+describe(`function closestToZeroBadPerfs`, () => {
     for (const testCase of testCases) {
         test(testCase.message, () => {
-            const { closestToZero } = require('../../lib/')
-            const solution = closestToZero(testCase.input)
+            const { closestToZeroBadPerfs } = require('../../lib/')
+            const solution = closestToZeroBadPerfs(testCase.input)
             expect.assertions(1)
             expect(solution).toBe(testCase.expected)
         })

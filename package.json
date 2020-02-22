@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Exercise: Close to Zero",
   "author": "rsouverain",
+  "engines": {
+    "node": ">=10.18.1"
+  },
   "keywords": [
     "exercise"
   ],
